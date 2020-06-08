@@ -84,9 +84,9 @@ void QEvdevTabletData::processInputEvent(input_event *ev)
         default:
             break;
         }
-    } else if (ev->type == EV_SYN && ev->code == SYN_REPORT && lastEventType != ev->type) {
         qCDebug(qLcEvdevTablet, "generating event");
         report();
+
     }
     lastEventType = ev->type;
 }
