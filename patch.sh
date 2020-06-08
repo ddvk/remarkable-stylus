@@ -1,6 +1,6 @@
 set -e
 
-wget "https://github.com/ddvk/remarkable-stylus/releases/download/0.0.1/libqevdevlamyplugin.so" -O /usr/lib/plugins/libqevdevlamyplugin.so
+wget "https://github.com/ddvk/remarkable-stylus/releases/download/0.0.1/libqevdevlamyplugin.so" -O /usr/lib/plugins/generic/libqevdevlamyplugin.so
 
 cat << EOF > /lib/systemd/system/xochitl.service 
 [Unit]
@@ -17,7 +17,7 @@ WatchdogSec=60
 
 [Install]
 WantedBy=multi-user.target
-EOF  
+EOF
 
 systemctl daemon-reload
 systemctl restart xochitl
