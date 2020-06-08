@@ -80,12 +80,13 @@ void QEvdevTabletData::processInputEvent(input_event *ev)
         switch (ev->code) {
         case BTN_STYLUS:
             down = ev->value != 0;
+            
+            qCDebug(qLcEvdevTablet, "generating event %d", down);
+            report();
             break;
         default:
             break;
         }
-        qCDebug(qLcEvdevTablet, "generating event");
-        report();
 
     }
     lastEventType = ev->type;
