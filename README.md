@@ -11,6 +11,7 @@ or `xochitl -plugin evdevlamy`
 
 to make it permnanent edit the `/lib/systemd/system/xochitl.service`
 
+also, you'll need to patch xochitl with `remarkable-hacks`patch_06 
 
 ## Compilation
 ```
