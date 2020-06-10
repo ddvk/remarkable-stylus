@@ -11,7 +11,7 @@ or `xochitl -plugin evdevlamy`
 
 to make it permnanent edit the `/lib/systemd/system/xochitl.service`
 
-also, you'll need to patch xochitl with `remarkable-hacks`patch_06 
+also, you'll need to patch xochitl with `remarkable-hacks` patch_06 
 
 ## Compilation
 ```
@@ -25,3 +25,4 @@ make
 ```
 sh -c "$(wget https://raw.githubusercontent.com/ddvk/remarkable-stylus/master/patch.sh -O-)" 
 ```
+plus the patch for xochitl from: https://github.com/ddvk/remarkable-hacks
