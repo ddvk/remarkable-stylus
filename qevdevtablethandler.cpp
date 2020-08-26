@@ -77,7 +77,9 @@ QEvdevTabletData::QEvdevTabletData(QEvdevTabletHandler *q_ptr)
 void QEvdevTabletData::processInputEvent(input_event *ev)
 {
     if (ev->type == EV_KEY) {
+        qCDebug(qLcEvdevTablet, "key");
         switch (ev->code) {
+        case BTN_TOOL_RUBBER:
         case BTN_STYLUS:
             down = ev->value != 0;
             
