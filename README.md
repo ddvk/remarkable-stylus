@@ -9,9 +9,9 @@ Copy `libqevdevlamyplugin.so` to `/usr/lib/plugins/generic`
 `export QT_QPA_GENERIC_PLUGINS=evdevlamy`  
 or `xochitl -plugin evdevlamy` 
 
-to make it permnanent edit the `/lib/systemd/system/xochitl.service`
+to make it permanent edit the `/lib/systemd/system/xochitl.service`
 
-also, you'll need to patch xochitl with `remarkable-hacks` patch_06 
+also, you'll need to patch xochitl with `remarkable-hacks` 
 
 ## Compilation
 ```
