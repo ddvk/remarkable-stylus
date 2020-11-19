@@ -1,6 +1,6 @@
 set -e
 
-wget "https://github.com/ddvk/remarkable-stylus/releases/download/0.0.2/libqevdevlamyplugin.so" -O /usr/lib/plugins/generic/libqevdevlamyplugin.so
+wget "https://github.com/ddvk/remarkable-stylus/releases/download/0.0.3/libqevdevlamyplugin.so" -O /usr/lib/plugins/generic/libqevdevlamyplugin.so
 
 cat << EOF > /lib/systemd/system/xochitl.service 
 [Unit]
