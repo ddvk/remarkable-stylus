@@ -77,13 +77,13 @@ QEvdevTabletData::QEvdevTabletData(QEvdevTabletHandler *q_ptr)
 void QEvdevTabletData::processInputEvent(input_event *ev)
 {
     if (ev->type == EV_KEY) {
-        // qCDebug(qLcEvdevTablet, "key");
+        auto qEvent = ev->value != 0 ? QEvent::KeyPress : QEvent::KeyRelease;
         switch (ev->code) {
         case BTN_TOOL_RUBBER:
+            QWindowSystemInterface::handleKeyEvent(0, qEvent, Qt::Key_I, Qt::ControlModifier);
+            break;
         case BTN_STYLUS:
-            down = ev->value != 0;
-            // qCDebug(qLcEvdevTablet, "generating event %d", down);
-            report();
+            QWindowSystemInterface::handleKeyEvent(0, qEvent, Qt::Key_U, Qt::ControlModifier);
             break;
         default:
             break;
@@ -94,8 +94,6 @@ void QEvdevTabletData::processInputEvent(input_event *ev)
 }
 
 void QEvdevTabletData::report(){
-    QWindowSystemInterface::handleKeyEvent(0, down ? QEvent::KeyPress : QEvent::KeyRelease, Qt::Key_U, Qt::ControlModifier);
-
 }
 
 
