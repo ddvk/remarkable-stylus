@@ -27,8 +27,6 @@ sh -c "$(wget https://raw.githubusercontent.com/ddvk/remarkable-stylus/master/pa
 ```
 plus the patch for xochitl from: https://github.com/ddvk/remarkable-hacks
 
-plus the patch for xochitl from: https://github.com/ddvk/remarkable-hacks
-
 **Needs to be reapplied after a software upgrade (both this and the hacks)**
 
 ### Uninstall Automagic
