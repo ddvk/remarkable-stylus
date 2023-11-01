@@ -11,6 +11,7 @@ OnFailure=remarkable-fail.service
 After=home.mount
 
 [Service]
+Environment="QT_QPA_GENERIC_PLUGINS=evdevlamy"
 ExecStart=/usr/bin/xochitl --system -plugin evdevlamy
 Restart=on-failure
 WatchdogSec=60
